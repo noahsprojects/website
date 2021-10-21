@@ -1,13 +1,13 @@
-import SideBar from './SideBar.js';
-import Channelbar from './ChannelBar.js';
-import ContentContainer from './ContentContainer.js';
+import SideBar from './components/SideBar.js';
+import Channelbar from './components/ChannelBar.js';
+import ContentContainer from './components/ContentContainer.js';
 
-const App = () => (
-  <div className="flex">
-    <SideBar />
-    <Channelbar />
-    <ContentContainer />
-  </div>
+const HomePage = () => (
+	<div className="flex">
+		<SideBar />
+		<Channelbar />
+		<ContentContainer />
+	</div>
 )
 
-export default App;
+export default HomePage;
