@@ -8,11 +8,11 @@ import {
 	} from 'react-icons/fa';
 import useDarkMode from '../utils/useDarkMode';
 
-const TopNavigation = () => {
+const TopNavigation = ({ title }: { title: string}) => {
 	return (
 		<div className='top-navigation'>
 			<HashtagIcon />
-			<Title text="noahknegt.com"/>
+			<Title text={title}/>
 			<ThemeIcon />
 			<Search />
 			<BellIcon />
