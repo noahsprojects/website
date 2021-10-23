@@ -12,7 +12,7 @@ const Channels: ChannelBarProps[] = [
 ];
 
 const Content: ContentContainerProps = {
-	title: 'testing',
+	title: 'home',
 	posts: [<Post
 		name='Ada'
 		timestamp='one week ago'
