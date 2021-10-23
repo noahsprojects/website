@@ -2,7 +2,7 @@ import { BsPlusCircleFill } from 'react-icons/bs';
 import TopNavigation from './TopNavigation';
 // import { useState } from 'react';
 
-const ContentContainer = ({ posts }) => {
+const ContentContainer = ({ posts = [""]}) => {
 	return (
 		<div className='content-container'>
 			<TopNavigation />
