@@ -2,7 +2,7 @@ import { BsPlusCircleFill } from 'react-icons/bs';
 import TopNavigation from './TopNavigation';
 // import { useState } from 'react';
 
-const ContentContainer = () => {
+const ContentContainer = ({ posts }) => {
 	return (
 		<div className='content-container'>
 			<TopNavigation />
@@ -72,9 +72,9 @@ const BottomBar = () => (
 	</div>
 );
 
-const Post = ({ name, timestamp, text }) => {
+const Post = ({ name, timestamp, text }: { name: string, timestamp: string, text: string}) => {
 
-	const seed = Math.round(Math.random() * 100);
+	const seed: number = Math.round(Math.random() * 100);
 	return (
 		<div className={'post'}>
 			<div className='avatar-wrapper'>
