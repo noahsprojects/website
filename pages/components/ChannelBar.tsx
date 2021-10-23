@@ -2,36 +2,41 @@ import { useState } from 'react';
 import { BsHash } from 'react-icons/bs';
 import { FaChevronDown, FaChevronRight, FaPlus } from 'react-icons/fa';
 
-const topics = ['tailwind-css', 'react', 'vue', 'angular', 'nodejs', 'express', 'mongodb', 'graphql'];	
-
-const ChannelBar = () => {
-  return (
-	<div className='shadow-lg channel-bar'>
-		<ChannelBlock />
-		<div className='channel-container'>
-			<Dropdown header='Languages' selections={topics} />
-		</div>
-	</div>
-  );
+export type ChannelBarProps = {
+	header: string,
+	topics: string[]
 };
 
-const Dropdown = ({ header, selections }) => {
-  const [expanded, setExpanded] = useState(true);
+const ChannelBar = ({ dropdowns }: { dropdowns: ChannelBarProps[] }) => {
+	let dropdownArray = dropdowns.map((dropdown) => <Dropdown header={dropdown.header} selections={dropdown.topics}/>);
 
-  return (
-	<div className='dropdown'>
-	  <div onClick={() => setExpanded(!expanded)} className='dropdown-header'>
-		<ChevronIcon expanded={expanded} />
-		<h5 className={expanded ? 'dropdown-header-text-selected' : 'dropdown-header-text'}>
-		  {header}
-		</h5>
-		<FaPlus size='12' className='my-auto ml-auto text-accent text-opacity-80' />
-	  </div>
-	  {expanded &&
-		selections &&
-		selections.map((selection) => <TopicSelection selection={selection} />)}
-	</div>
-  );
+	return (
+		<div className='shadow-lg channel-bar'>
+			<ChannelBlock />
+			<div className='channel-container'>
+				{dropdownArray}
+			</div>
+		</div>
+	);
+};
+
+const Dropdown = ({ header, selections }: {header: string, selections}) => {
+  	const [expanded, setExpanded] = useState(true);
+
+	return (
+		<div className='dropdown'>
+		<div onClick={() => setExpanded(!expanded)} className='dropdown-header'>
+			<ChevronIcon expanded={expanded} />
+			<h5 className={expanded ? 'dropdown-header-text-selected' : 'dropdown-header-text'}>
+				{header}
+			</h5>
+			<FaPlus size='12' className='my-auto ml-auto text-accent text-opacity-80' />
+		</div>
+		{expanded &&
+			selections &&
+			selections.map((selection) => <TopicSelection selection={selection} />)}
+		</div>
+	);
 };
 
 const ChevronIcon = ({ expanded }) => {
