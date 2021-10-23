@@ -1,8 +1,8 @@
-import SideBar from './components/SideBar';
-import Channelbar from './components/ChannelBar';
-import { ChannelBarProps } from './components/ChannelBar';
-import ContentContainer from './components/ContentContainer';
-import { ContentContainerProps, Post } from './components/ContentContainer';
+import SideBar from '../components/SideBar';
+import Channelbar from '../components/ChannelBar';
+import { ChannelBarProps } from '../components/ChannelBar';
+import ContentContainer from '../components/ContentContainer';
+import { ContentContainerProps, Post } from '../components/ContentContainer';
 
 const Channels: ChannelBarProps[] = [
 	{
