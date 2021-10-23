@@ -2,19 +2,15 @@ import { useState } from 'react';
 import { BsHash } from 'react-icons/bs';
 import { FaChevronDown, FaChevronRight, FaPlus } from 'react-icons/fa';
 
-const topics = ['tailwind-css', 'react'];
-const questions = ['jit-compilation', 'purge-files', 'dark-mode'];
-const random = ['variants', 'plugins'];
+const topics = ['tailwind-css', 'react', 'vue', 'angular', 'nodejs', 'express', 'mongodb', 'graphql'];	
 
 const ChannelBar = () => {
   return (
 	<div className='shadow-lg channel-bar'>
-	  <ChannelBlock />
-	  <div className='channel-container'>
-		<Dropdown header='Topics' selections={topics} />
-		<Dropdown header='Questions' selections={questions} />
-		<Dropdown header='Random' selections={random} />
-	  </div>
+		<ChannelBlock />
+		<div className='channel-container'>
+			<Dropdown header='Languages' selections={topics} />
+		</div>
 	</div>
   );
 };

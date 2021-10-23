@@ -1,5 +1,5 @@
 import { BsPlusCircleFill } from 'react-icons/bs';
-import TopNavigation from './TopNavigation.js';
+import TopNavigation from './TopNavigation';
 // import { useState } from 'react';
 
 const ContentContainer = () => {

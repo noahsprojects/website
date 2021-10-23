@@ -4,6 +4,9 @@ import { FaGithub } from 'react-icons/fa';
 import { MdSchool, MdWorkOutline } from 'react-icons/md';
 import { RiContactsBookFill } from 'react-icons/ri';
 import { SiAboutdotme } from 'react-icons/si';
+import { NextRouter, useRouter } from 'next/router';
+import React from 'react';
+
 
 const SideBar = () => {
 	return (
@@ -24,20 +27,19 @@ const SideBar = () => {
 	);
 };
 
-const SideBarIcon = ({ icon, text = 'tooltip 💡', url = "/" }) => (
-	<div className="sidebar-icon group" onClick= {() => Redirect(url)}>
-		{icon}
+const SideBarIcon = ({ icon, text = 'tooltip 💡', url = "/" }) => {
+	const router: NextRouter = useRouter();
+	return (
+		<div className="sidebar-icon group" onClick= {() => router.push(url)}>
+			{icon}
 
-		<span class="sidebar-tooltip group-hover:scale-100">
-			{text}
-		</span>
-	</div>
-);
+			<span className="sidebar-tooltip group-hover:scale-100">
+				{text}
+			</span>
+		</div>
+	);
+};
 
 const Divider = () => <hr className="sidebar-hr" />;
-
-function Redirect(url) {
-	window.location.href = url;
-}
 
 export default SideBar;

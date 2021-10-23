@@ -6,7 +6,7 @@ import {
 		FaMoon,
 		FaSun,
 	} from 'react-icons/fa';
-import useDarkMode from '../utils/useDarkMode.js';
+import useDarkMode from '../utils/useDarkMode';
 
 const TopNavigation = () => {
 	return (
