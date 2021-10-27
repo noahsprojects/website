@@ -22,7 +22,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/utils/useDarkMode.js"  ],
+    "components/utils/useDarkMode.js"  
+  ],
   "exclude": [
     "node_modules"
   ]

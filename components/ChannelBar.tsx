@@ -21,7 +21,7 @@ const ChannelBar = ({ dropdowns }: { dropdowns: ChannelBarProps[] }) => {
 };
 
 const Dropdown = ({ header, selections }: {header: string, selections: string[]}) => {
-  	const [expanded, setExpanded] = useState(true);
+	const [expanded, setExpanded] = useState(true);
 
 	return (
 		<div className='dropdown'>

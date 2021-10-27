@@ -17,7 +17,8 @@ const Channels: ChannelBarProps[] = [
 
 const Content: ContentContainerProps = {
 	title: 'about',
-	posts: [<Post
+	posts: [
+	<Post
 		name='Ada'
 		timestamp='one week ago'
 		text={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit
@@ -42,7 +43,8 @@ const Content: ContentContainerProps = {
 
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
 		ipsum dolor sit amet consectetur adipisicing elit.`}
-	/>,]
+	/>,
+	]
 }
 
 const AboutPage = () => (
