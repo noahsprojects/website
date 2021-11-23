@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The website for noahknegt.com build with next.js and tailwindcss",
   "private": true,
   "scripts": {
