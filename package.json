@@ -2,6 +2,10 @@
   "name": "website",
   "version": "0.1.1",
   "description": "The website for noahknegt.com build with next.js and tailwindcss",
+  "author": {
+    "name": "Noah Knegt",
+    "email": "admin@noahknegt.com"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
