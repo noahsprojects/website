@@ -6,7 +6,7 @@ WORKDIR /usr/src/website
 
 COPY package*.json /usr/src/website/
 
-RUN npm ci --only=production
+RUN npm install
 
 COPY . /usr/src/website
 
